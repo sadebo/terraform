@@ -12,7 +12,7 @@ resource "aws_instance" "sanu" {
   user_data = <<EOF
   #!/bin/bash
   echo "Hello World" > index.html
-  nohup busybox httpd -f -p "${variable.server_port}" &
+  nohup busybox httpd -f -p "${var.server_port}" &
               EOF
   tags {
 	  Name = "My test VM"
